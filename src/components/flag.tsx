@@ -14,6 +14,8 @@ const Flag: React.FC<FlagProps> = ({ flag, ...props }) => {
 			h='12'
 			borderRadius={'full'}
 			bgPos='center'
+			bgSize={'cover'}
+			boxShadow='xl'
 			{...props}
 		/>
 	)

@@ -1,15 +1,28 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import * as React from 'react'
 import ReactDOM from 'react-dom'
+
+import { QueryClient, QueryClientProvider } from 'react-query'
+
 import { App } from './App'
 import reportWebVitals from './reportWebVitals'
 import * as serviceWorker from './serviceWorker'
 
+const client = new QueryClient({
+	defaultOptions: {
+		queries: {
+			refetchOnWindowFocus: false,
+		},
+	},
+})
+
 ReactDOM.render(
 	<React.StrictMode>
-		<ChakraProvider>
-			<App />
-		</ChakraProvider>
+		<QueryClientProvider client={client}>
+			<ChakraProvider>
+				<App />
+			</ChakraProvider>
+		</QueryClientProvider>
 	</React.StrictMode>,
 	document.getElementById('root'),
 )
