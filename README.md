@@ -1,5 +1,4 @@
-This project was bootstrapped with
-[Create React App](https://github.com/facebook/create-react-app).
+You must have [Finnhub API key](https://finnhub.io/) to run this project properly. Create your own `.env` in your local machine and give your API KEY as exact in `.env.example` file.
 
 ## Available Scripts
 
